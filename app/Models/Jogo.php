@@ -13,6 +13,12 @@ class Jogo extends Model
         'nome',
         'categoria',
         'ano_criacao',
-        'valor'
+        'valor',
+        'user_id'
     ];
+
+    public function dono()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

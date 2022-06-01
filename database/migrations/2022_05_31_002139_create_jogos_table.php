@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('jogos', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('categoria');
+            $table->year('ano_criacao');
+            $table->double('valor', 8, 2);
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
